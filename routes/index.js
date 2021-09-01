@@ -35,7 +35,7 @@ router.post("/login",passport.authenticate("local",{
 	successRedirect:"/campgrounds",
 	faliureRedirect:"/login"
 }),function(req,res){
-	
+	req.flash("success", "LOGGED YOU OUT!");
 })
 
 router.get("/logout",function(req,res){

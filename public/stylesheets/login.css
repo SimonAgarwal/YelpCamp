@@ -1,0 +1,18 @@
+#login{
+    margin-left:35%;
+    margin-top:6%;
+}
+@media (max-width:410px){
+    #login.responsive{
+        margin-left:40px;
+        width:750px;
+        margin-top: 30%;
+    }
+}
+/*@media screen and (min-width:411px) and (max-width:768px){
+    #login.responsive{
+        margin-left:80px;
+        width:750px;
+        margin-top: 20%;
+    }
+}*/

@@ -1,0 +1,18 @@
+#register{
+    margin-left:35%;
+    margin-top:6%;
+}
+@media (max-width:410px){
+    #register.responsive{
+        margin-left:30px;
+        width:750px;
+        margin-top: 30%;
+    }
+}
+@media screen and (min-width:411px) and (max-width:768px){
+    #register.responsive{
+        margin-left:80px;
+        width:750px;
+        margin-top: 20%;
+    }
+}
