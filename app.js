@@ -15,7 +15,16 @@ var authRoutes=require("./routes/index");
 //config
 
 
-mongoose.connect('mongodb://localhost:27017/BlogApp'); 
+const config=require("./config/mongo");
+//config
+//mongoose.connect('mongodb://localhost:27017/BlogApp');
+mongoose.connect(config.database,{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.on('connected',()=>{
+    console.log("Connected to database"+config.database);
+})
+mongoose.connection.on('error',(err)=>{
+    console.log("Not connected"+err);
+}) 
 var campground=require("./models/campgrounds");
 var comment=require("./models/comment");
 var User=require("./models/user")
@@ -54,6 +63,6 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds",campgroundRoutes);
 app.use(authRoutes);
 
-app.listen(3000,function(){
+app.listen(process.env.PORT,function(){
 	console.log("server has started");
 });
