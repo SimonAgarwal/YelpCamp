@@ -1,6 +1,8 @@
 var express=require("express");
 var app=express();
+require('dotenv').config();
 var BodyParser=require("body-parser"),
+
 mongoose=require("mongoose"),
 	passport=require("passport"),
 	flash=require("connect-flash")
