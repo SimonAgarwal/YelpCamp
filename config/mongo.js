@@ -1,4 +1,4 @@
 module.exports={
-    database: "mongodb+srv://Admin:simon@cluster0.jujtp.mongodb.net/YelpCamp?retryWrites=true&w=majority",
+    database: process.env.DB_HOST ,
    secret:process.env.DB_SECRET
 }
